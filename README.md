@@ -5,14 +5,21 @@ List CKA practice questions and solutions
 Question 1 | Contexts
 
 You have access to multiple clusters from your main terminal through kubectl contexts. Write all those context names into /opt/course/1/contexts.
+
 	k config get-contexts -o name
+	
 	k config view -o yaml
+	
 	k config view -o json
+	
 	k config view -o jsonpath="{.contexts[*].name}"
+	
 Next write a command to display the current context into /opt/course/1/context_default_kubectl.sh, the command should use kubectl.
+	
 	k config current-context
 
 Finally write a second command doing the same thing into /opt/course/1/context_default_no_kubectl.sh, but without the use of kubectl
+	
 	cat /kube/config/file | grep -i current
 
 Question 2 | Schedule Pod on Master Node
